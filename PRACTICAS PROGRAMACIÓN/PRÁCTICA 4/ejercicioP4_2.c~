@@ -1,0 +1,29 @@
+//ALEJANDRO REYES ALBILLAR 45931406-S//
+#include <iostream>
+using namespace std;
+
+int main() {
+  int num, div, sig;
+  sig=0;
+    do {
+      cout << "Introduce un número natural: ";
+      cin >> num;
+      if(num<=0)
+	cout << "Ese número no es natural." << endl;
+    } while (num<=0);
+    do {
+      for(div=1; div<=num/2; div++) {
+	if(num%div==0)
+	  cout << "El número no es primo\n";
+      }
+    } while(num%div==0);
+    do {
+      num=num+1;
+      for(div=1; div<=num/2; div++){
+	if(num%div!=0)
+	sig=num;
+      }
+    }while(sig!=0);
+   
+    cout << "El siguiente número es :" << sig << endl;
+}
